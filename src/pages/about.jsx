@@ -1,29 +1,15 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { mockDepartment } from "../data/department";
 
 export default function About() {
   const [selectedDepartment, setSelectedDepartment] = useState(null);
-  const departments = [
-    {
-      name: "IT",
-      manager: "John Doe",
-      description: "Responsible for software development and infrastructure.",
-    },
-    {
-      name: "HR",
-      manager: "Jane Smith",
-      description: "Manages recruitment and employee relations.",
-    },
-    {
-      name: "Finance",
-      manager: "Robert Brown",
-      description: "Handles budgeting, accounting and financial reporting.",
-    },
-  ];
 
   const handleDepartmentClick = (departmentName) => {
-    const department = departments.find((dept) => dept.name === departmentName);
+    const department = mockDepartment.find(
+      (dept) => dept.name === departmentName,
+    );
 
     setSelectedDepartment(department);
   };
@@ -78,9 +64,9 @@ export default function About() {
           comprehensive solutions for our clients.
         </p>
         <ul>
-          {departments.map((dept, index) => (
+          {mockDepartment.map((dept, index) => (
             <li key={index} onClick={() => handleDepartmentClick(dept.name)}>
-              <strong>{dept.name}:</strong> {dept.description}
+              <strong>{dept.name}</strong>
             </li>
           ))}
         </ul>
