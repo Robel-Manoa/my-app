@@ -1,38 +1,198 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma;
+  list-style: none;
+}
+
+.navbar {
+  background-color: #333;
+  color: white;
   text-align: center;
+  width: 15%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.head-navbar {
+  margin-bottom: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-link{
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-link:hover {
+  background-color: #ddd;
+  color: black;
+  transition: 0.3s;
+  animation-duration: 3ms;
+  padding-left: 1rem;
+}
+
+.body-page{
+  padding-left: 17%;
+}
+
+.feedback-form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 20%;
+  margin: auto;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 5px;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+}
+
+.feedback-form label{
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+.feedback-form input, .feedback-form textarea{
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.feedback-form button{
+  padding: 0.5rem;
+  background-color: #333;
   color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.feedback-form button:hover{
+  background-color: #555;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.feedback-form select{
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardFeedback{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: auto;
+}
+
+.cardFeedback p{
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.feedback-list{
+  position: absolute;
+  left: 17%;
+  top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 55%;
+}
+
+.searcher-bar{
+  position: fixed;
+  right: 5%;
+  top: 20%;
+  width: 13%;
+}
+
+.searcher-bar input{
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.cardAnnoucement{
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 35%;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.cardAnnoucement:hover{
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cardAnnoucement .card-header{
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cardAnnoucement .card-body{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cardAnnoucement .card-footer ul{
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.aboutSection{
+  position: relative;
+  top: 10%;
+  width: 55%;
+  padding: 1rem;
+}
+
+.missionSection{
+  position: relative;
+  top: 10%;
+  width: 90%;
+  padding: 1rem;
+  text-align: right;
+}
+
+.departmentSection{
+  position: relative;
+  top: 10%;
+  width: 90%;
+  padding: 1rem;
+  text-align: left;
+}
+
+.departmentSection ul{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.departmentSection ul li{
+  position: relative;
+  width: 20%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
 }
