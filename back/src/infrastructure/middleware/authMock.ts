@@ -5,7 +5,7 @@ import { Request, Response, NextFunction } from 'express'
 export function authMock(req: Request, res: Response, next: NextFunction) {
   const rawUser = req.headers['x-user'] as string | undefined
   const rawRole = req.headers['x-user-role'] as string | undefined
-  const role = rawRole?.toString().trim() || 'Employee'
+  const role = rawRole?.toString().trim().toUpperCase() || 'EMPLOYEE'
 
   if (rawUser) {
     const text = rawUser.toString().trim()
@@ -13,7 +13,7 @@ export function authMock(req: Request, res: Response, next: NextFunction) {
       const user = JSON.parse(text)
       ;(req as any).user = {
         id: user.id || 'anonymous',
-        role: user.role ? user.role.toString().trim() : role,
+        role: user.role ? user.role.toString().trim().toUpperCase() : role,
         departmentId: user.departmentId || 'dept-1',
       }
     } catch {
