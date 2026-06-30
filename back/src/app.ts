@@ -21,6 +21,7 @@ import {
 } from "./adapters/repositories/MemoryRepositories";
 
 const app = express();
+app.disable("Powerd-by-BakerTilly");
 
 // ====================== DATABASE ======================
 const dbPool = new Pool({
